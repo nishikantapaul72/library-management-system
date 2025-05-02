@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-50">
+      <!-- Header with Dashboard title and auth buttons -->
+      <header
+        class="bg-black text-white py-4 px-6 flex justify-between items-center"
+      >
+        <h1 class="text-3xl font-bold">Dashboard</h1>
+
+        <div class="flex space-x-4">
+          <div>
+            <a
+              href="login.html"
+              class="flex items-center font-semibold py-2 px-6 rounded"
+            >
+              <!-- Simple Login icon -->
+              <svg
+                class="w-4 h-4 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                ></path>
+              </svg>
+              Login
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <div class="p-6">
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Left section - Course overview -->
+          <div class="w-full md:w-3/4 bg-white rounded-lg shadow">
+            <div class="border-b p-4">
+              <h2 class="text-xl font-semibold">Course overview</h2>
+            </div>
+
+            <div class="p-4">
+              <!-- Filter and search controls -->
+              <div class="flex flex-wrap gap-4 mb-4">
+                <div class="relative">
+                  <select class="bg-gray-500 text-white px-3 py-2 rounded-md">
+                    <option value="all">All</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="future">Future</option>
+                    <option value="past">Past</option>
+                  </select>
+                </div>
+
+                <div class="flex-grow">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    class="w-full px-3 py-2 border rounded-md"
+                  />
+                </div>
+
+                <div class="relative">
+                  <select class="bg-gray-500 text-white px-3 py-2 rounded-md">
+                    <option value="course-name">Sort by course name</option>
+                    <option value="last-accessed">Sort by last accessed</option>
+                  </select>
+                </div>
+
+                <div class="relative">
+                  <select class="bg-gray-500 text-white px-3 py-2 rounded-md">
+                    <option value="card">Card</option>
+                    <option value="list">List</option>
+                    <option value="summary">Summary</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Course cards - grid display -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Example course card -->
+                <div class="border rounded-md overflow-hidden">
+                  <div class="h-48 bg-blue-800 relative">
+                    <div
+                      class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold"
+                    >
+                      BootCamp - 2025
+                    </div>
+                  </div>
+                  <div class="p-3">
+                    <h3 class="font-semibold">BootCamp-2025</h3>
+                    <p class="text-gray-600">BootCamp</p>
+                    <div class="flex justify-between items-center mt-4">
+                      <span>20% complete</span>
+                      <button class="text-gray-500">
+                        <svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second course example -->
+                <div class="border rounded-md overflow-hidden">
+                  <div class="h-48 bg-purple-500 relative">
+                    <div
+                      class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold"
+                    >
+                      Cyber Security
+                    </div>
+                  </div>
+                  <div class="p-3">
+                    <h3 class="font-semibold">
+                      Cyber Security and Physical Protection
+                    </h3>
+                    <p class="text-gray-600">Cybersecurity</p>
+                    <div class="flex justify-between items-center mt-4">
+                      <span>100% complete</span>
+                      <button class="text-gray-500">
+                        <svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Third course example -->
+                <div class="border rounded-md overflow-hidden">
+                  <div class="h-48 bg-gray-400 relative">
+                    <div
+                      class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold"
+                    >
+                      Database Course
+                    </div>
+                  </div>
+                  <div class="p-3">
+                    <h3 class="font-semibold">Database Course - (BootCamp)</h3>
+                    <p class="text-gray-600">BootCamp</p>
+                    <div class="flex justify-between items-center mt-4">
+                      <span>99% complete</span>
+                      <button class="text-gray-500">
+                        <svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right sidebar - Recently accessed -->
+          <div class="w-full md:w-1/4 space-y-6">
+            <div class="bg-white rounded-lg shadow">
+              <div class="border-b p-4 flex justify-between items-center">
+                <h2 class="text-xl font-semibold">Recently accessed courses</h2>
+                <div class="flex space-x-2">
+                  <button class="text-gray-500 hover:text-gray-700 p-1">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button class="text-gray-500 hover:text-gray-700 p-1">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="p-4">
+                <!-- Course thumbnails in a row -->
+                <div class="flex space-x-2">
+                  <div class="w-1/3">
+                    <div class="h-24 bg-blue-800 rounded"></div>
+                    <p class="text-sm mt-1 truncate">BootCamp</p>
+                  </div>
+                  <div class="w-1/3">
+                    <div class="h-24 bg-gray-200 rounded"></div>
+                    <p class="text-sm mt-1 truncate">Database</p>
+                  </div>
+                  <div class="w-1/3">
+                    <div class="h-24 bg-gray-200 rounded"></div>
+                    <p class="text-sm mt-1 truncate">Next.js</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow">
+              <div class="border-b p-4">
+                <h2 class="text-xl font-semibold">Recently accessed items</h2>
+              </div>
+              <div class="p-4 space-y-2">
+                <div class="border rounded p-2 flex">
+                  <div class="bg-blue-100 p-2 mr-2">
+                    <svg
+                      class="w-5 h-5 text-blue-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">A1 English Listening P...</h4>
+                    <p class="text-sm text-gray-500">BootCamp-2025</p>
+                  </div>
+                </div>
+
+                <div class="border rounded p-2 flex">
+                  <div class="bg-red-100 p-2 mr-2">
+                    <svg
+                      class="w-5 h-5 text-red-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Week 3 - Quiz - React</h4>
+                    <p class="text-sm text-gray-500">BootCamp-2025</p>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <button
+                    class="bg-gray-500 text-white w-full py-2 rounded hover:bg-gray-600"
+                  >
+                    Show more items
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
